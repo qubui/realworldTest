@@ -22,6 +22,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -66,26 +67,23 @@ public class BaseTest {
 			}		
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1440,900));//full screen
-	     	
-		} else if (browserName.equalsIgnoreCase("firefox")) {
+			
+		} else if (browserName.contains("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")
 	 				+"\\src\\main\\java\\resources\\geckodriver.exe");
-			//DesiredCapabilities capabilities = new DesiredCapabilities();
-            //capabilities.setCapability("webdriver.gecko.driver", true);
-			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("--remote-allow-origins=*");
-			WebDriverManager.firefoxdriver().setup();
-			if(browserName.contains("headless")){
-			options.addArguments("headless");
-			}		
-			driver = new FirefoxDriver(options);
-			driver.manage().window().setSize(new Dimension(1440,900));//full screen
-		} else if (browserName.equalsIgnoreCase("edge")) {
+			  driver = new FirefoxDriver();
+			
+		} else if (browserName.contains("edge")) {
 			// Edge
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")
 	 				+"//src//main//java//resources//msedgedriver.exe");
-			driver = new EdgeDriver();
-			//driver.get(url);
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			WebDriverManager.edgedriver().setup();
+			if(browserName.contains("headless")){
+			options.addArguments("headless");
+			}		
+			driver = new EdgeDriver(options);
 		}
 		
 		 
@@ -114,7 +112,6 @@ public class BaseTest {
 	@AfterMethod
 	public void tearDown()
 	{
-		driver.quit();
 		driver.close();
 	}
 	
