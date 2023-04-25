@@ -29,6 +29,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -159,4 +160,6 @@ public class BaseTest {
 	    username = temp.substring(0, temp.length() - 9);
 	    return username;
 	}
+	
+	
 }

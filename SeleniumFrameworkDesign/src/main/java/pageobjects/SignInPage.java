@@ -39,7 +39,7 @@ public class SignInPage extends AbstractComponent{
 	
 	
 	
-	public void login(String email, String password) throws InterruptedException
+	public void login(String email, String password)
 	{
 		waitForWebElementToAppear(lnkLogin);
 		lnkLogin.click();

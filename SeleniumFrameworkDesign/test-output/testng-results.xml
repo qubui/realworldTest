@@ -2,38 +2,50 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-21T11:31:13Z" name="Suite" finished-at="2023-04-21T11:32:04Z" duration-ms="51075">
+  <suite started-at="2023-04-25T03:55:10Z" name="Default suite" finished-at="2023-04-25T03:56:10Z" duration-ms="59611">
     <groups>
     </groups>
-    <test started-at="2023-04-21T11:31:13Z" name="Test" finished-at="2023-04-21T11:32:04Z" duration-ms="51075">
+    <test started-at="2023-04-25T03:55:10Z" name="Default test" finished-at="2023-04-25T03:56:10Z" duration-ms="59611">
       <class name="tests.SignUpTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SignUpTest@60129b9a]" started-at="2023-04-21T11:31:13Z" name="launchApplication" finished-at="2023-04-21T11:31:38Z" duration-ms="24286" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SignUpTest@7862f56]" started-at="2023-04-25T03:55:10Z" name="launchApplication" finished-at="2023-04-25T03:55:36Z" duration-ms="25788" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="SignUpSuccessfully()[pri:0, instance:tests.SignUpTest@60129b9a]" started-at="2023-04-21T11:31:38Z" name="SignUpSuccessfully" finished-at="2023-04-21T11:31:40Z" duration-ms="1829" status="PASS">
+        <test-method signature="SignUpSuccessfully()[pri:0, instance:tests.SignUpTest@7862f56]" started-at="2023-04-25T03:55:36Z" name="SignUpSuccessfully" finished-at="2023-04-25T03:55:38Z" duration-ms="1926" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUpSuccessfully -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SignUpTest@60129b9a]" started-at="2023-04-21T11:31:40Z" name="tearDown" finished-at="2023-04-21T11:31:40Z" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SignUpTest@7862f56]" started-at="2023-04-25T03:55:38Z" name="tearDown" finished-at="2023-04-25T03:55:38Z" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.SignUpTest -->
       <class name="tests.SignInTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SignInTest@78d6692f]" started-at="2023-04-21T11:31:40Z" name="launchApplication" finished-at="2023-04-21T11:32:03Z" duration-ms="23229" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SignInTest@3a12c404]" started-at="2023-04-25T03:55:38Z" name="launchApplication" finished-at="2023-04-25T03:56:08Z" duration-ms="30014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginUnsuccessfully()[pri:0, instance:tests.SignInTest@78d6692f]" started-at="2023-04-21T11:32:03Z" name="LoginUnsuccessfully" finished-at="2023-04-21T11:32:04Z" duration-ms="1519" status="PASS">
+        <test-method signature="LoginUnsuccessfully(java.lang.String, java.lang.String)[pri:0, instance:tests.SignInTest@3a12c404]" started-at="2023-04-25T03:56:08Z" name="LoginUnsuccessfully" data-provider="getData" finished-at="2023-04-25T03:56:10Z" duration-ms="1656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[incorrectEmail@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[incorrectPass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginUnsuccessfully -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SignInTest@78d6692f]" started-at="2023-04-21T11:32:04Z" name="tearDown" finished-at="2023-04-21T11:32:04Z" duration-ms="97" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SignInTest@3a12c404]" started-at="2023-04-25T03:56:10Z" name="tearDown" finished-at="2023-04-25T03:56:10Z" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.SignInTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

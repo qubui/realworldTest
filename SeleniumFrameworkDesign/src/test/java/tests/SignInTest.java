@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import TestComponents.BaseTest;
 import pageobjects.SignInPage;
@@ -9,13 +10,21 @@ import org.testng.Assert;
 
 public class SignInTest extends BaseTest {
 
-
-	@Test
-	public void LoginUnsuccessfully() throws IOException, InterruptedException
+	public static final String invalidMessage = "email or password is invalid";
+	@Test(dataProvider="getData")
+	public void LoginUnsuccessfully(String email, String password)
 	{
 		SignInPage signInPage = new SignInPage(driver);
-		signInPage.login("incorrectEmail@gmail.com", "incorrectPass");
+		signInPage.login(email, password);
 		String actualMessage = signInPage.getErrorMessage();
-		Assert.assertEquals(actualMessage, "email or password is invalid");		
+		Assert.assertEquals(actualMessage, invalidMessage);		
 	}
+	
+	
+	@DataProvider
+	public Object[][] getData()
+	{
+		return new Object[][]  {{"incorrectEmail@gmail.com", "incorrectPass"}};
+	}
+	
 }

@@ -38,7 +38,7 @@ public class SignUpPage extends AbstractComponent{
 		WebElement btnSubmit;
 
 		
-		public HomePage SignUpSuccessfully(String username, String email, String password) throws InterruptedException
+		public HomePage SignUpSuccessfully(String username, String email, String password)
 		{
 			waitForWebElementToAppear(lnkSignUp);
 			lnkSignUp.click();
